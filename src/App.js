@@ -1,15 +1,12 @@
-function App() {
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Users from "./user/pages/Users";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        Learn React
-      </header>
-    </div>
+    <Router>
+      <Route path="/" component={Users} exact />
+    </Router>
   );
-}
+};
 
 export default App;
